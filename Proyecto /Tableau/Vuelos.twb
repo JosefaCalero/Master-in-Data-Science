@@ -1,0 +1,1334 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0315.0125                                -->
+<workbook source-build='9.3.0 (9300.16.0315.0125)' source-platform='win' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='9.3'>
+      <aliases enabled='yes' />
+      <column caption='Parameter 1' datatype='real' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='18.5'>
+        <calculation class='tableau' formula='18.5' />
+        <range granularity='92.5' max='92.5' min='18.5' />
+      </column>
+    </datasource>
+    <datasource caption='duracion_viaje (TFM)' inline='true' name='postgres.0upc5q61tad3nd1aadi900nwyiu5' version='9.3'>
+      <connection authentication='username-password' class='postgres' dbname='TFM' odbc-native-protocol='yes' port='5432' server='localhost' username='postgres'>
+        <relation name='duracion_viaje' table='[public].[duracion_viaje]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>document_number</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[document_number]</local-name>
+            <parent-name>[duracion_viaje]</parent-name>
+            <remote-alias>document_number</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>segmento</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[segmento]</local-name>
+            <parent-name>[duracion_viaje]</parent-name>
+            <remote-alias>segmento</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>creation_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[creation_date]</local-name>
+            <parent-name>[duracion_viaje]</parent-name>
+            <remote-alias>creation_date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duracion</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[duracion]</local-name>
+            <parent-name>[duracion_viaje]</parent-name>
+            <remote-alias>duracion</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_ida</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[dia_ida]</local-name>
+            <parent-name>[duracion_viaje]</parent-name>
+            <remote-alias>dia_ida</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_vuelta</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[dia_vuelta]</local-name>
+            <parent-name>[duracion_viaje]</parent-name>
+            <remote-alias>dia_vuelta</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_semana_compra</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[dia_semana_compra]</local-name>
+            <parent-name>[duracion_viaje]</parent-name>
+            <remote-alias>dia_semana_compra</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>8190</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Segmento nombre' datatype='string' name='[Calculation_263742078033911809]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [segmento] &#13;&#10;    WHEN &apos;0&apos; THEN &apos;Desvinculados&apos;&#13;&#10;    WHEN &apos;1&apos; THEN &apos;Nuevos&apos;&#13;&#10;    WHEN &apos;2&apos; THEN &apos;Turistas&apos;&#13;&#10;    WHEN &apos;3&apos; THEN &apos;Habituales&apos;&#13;&#10;END' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Creation Date' datatype='date' name='[creation_date]' role='dimension' type='ordinal' />
+      <column caption='Dia Ida' datatype='string' name='[dia_ida]' role='dimension' type='nominal' />
+      <column caption='Dia Semana Compra' datatype='string' name='[dia_semana_compra]' role='dimension' type='nominal' />
+      <column caption='Dia Vuelta' datatype='string' name='[dia_vuelta]' role='dimension' type='nominal' />
+      <column caption='Document Number' datatype='string' name='[document_number]' role='dimension' type='nominal' />
+      <column caption='Duracion' datatype='integer' name='[duracion]' role='measure' type='quantitative' />
+      <column caption='Segmento' datatype='string' name='[segmento]' role='dimension' type='nominal' />
+      <column-instance column='[dia_ida]' derivation='None' name='[none:dia_ida:nk]' pivot='key' type='nominal' />
+      <column-instance column='[dia_vuelta]' derivation='None' name='[none:dia_vuelta:nk]' pivot='key' type='nominal' />
+      <column-instance column='[duracion]' derivation='None' name='[none:duracion:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[duracion]' derivation='None' name='[none:duracion:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[segmento]' derivation='None' name='[none:segmento:nk]' pivot='key' type='nominal' />
+      <column-instance column='[document_number]' derivation='Count' name='[pcto:cnt:document_number:qk:11]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[document_number]' derivation='Count' name='[pcto:cnt:document_number:qk:12]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Table' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[document_number]' derivation='Count' name='[pcto:cnt:document_number:qk:13]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Pane' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[document_number]' derivation='Count' name='[pcto:cnt:document_number:qk:9]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Field' type='PctTotal'>
+          <order field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]' />
+          <order field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:segmento:nk]' />
+        </table-calc>
+      </column-instance>
+      <column-instance column='[duracion]' derivation='Sum' name='[sum:duracion:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Dia Vuelta,Segmento)' hidden='true' name='[Action (Dia Vuelta,Segmento)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[dia_vuelta]' />
+          <groupfilter function='level-members' level='[segmento]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Duracion,Segmento)' hidden='true' name='[Action (Duracion,Segmento)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:duracion:ok]' />
+          <groupfilter function='level-members' level='[segmento]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.402676' measure-ordering='alphabetic' measure-percentage='0.572993' parameter-percentage='0.0243309' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:dia_ida:nk]' type='palette'>
+            <map to='#006ba4'>
+              <bucket>&quot;Monday   &quot;</bucket>
+            </map>
+            <map to='#5f9ed1'>
+              <bucket>&quot;Tuesday  &quot;</bucket>
+            </map>
+            <map to='#898989'>
+              <bucket>&quot;Thursday &quot;</bucket>
+            </map>
+            <map to='#a2c8ec'>
+              <bucket>&quot;Wednesday&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Sunday   &quot;</bucket>
+            </map>
+            <map to='#ff800e'>
+              <bucket>&quot;Saturday &quot;</bucket>
+            </map>
+            <map to='#ffbc79'>
+              <bucket>&quot;Friday   &quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:11]&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:12]&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:13]&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:9]&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;[postgres.0upc5q61tad3nd1aadi900nwyiu5].[sum:duracion:qk]&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;[postgres.0upc5q61tad3nd1aadi900nwyiu5]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:dia_vuelta:nk]' type='palette'>
+            <map to='#006ba4'>
+              <bucket>&quot;Monday   &quot;</bucket>
+            </map>
+            <map to='#5f9ed1'>
+              <bucket>&quot;Tuesday  &quot;</bucket>
+            </map>
+            <map to='#898989'>
+              <bucket>&quot;Thursday &quot;</bucket>
+            </map>
+            <map to='#a2c8ec'>
+              <bucket>&quot;Wednesday&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Sunday   &quot;</bucket>
+            </map>
+            <map to='#ff800e'>
+              <bucket>&quot;Saturday &quot;</bucket>
+            </map>
+            <map to='#ffbc79'>
+              <bucket>&quot;Friday   &quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Spain&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <sort class='manual' column='[none:dia_ida:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Monday   &quot;</bucket>
+            <bucket>&quot;Tuesday  &quot;</bucket>
+            <bucket>&quot;Wednesday&quot;</bucket>
+            <bucket>&quot;Thursday &quot;</bucket>
+            <bucket>&quot;Friday   &quot;</bucket>
+            <bucket>&quot;Saturday &quot;</bucket>
+            <bucket>&quot;Sunday   &quot;</bucket>
+          </dictionary>
+        </sort>
+        <sort class='manual' column='[none:dia_vuelta:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Monday   &quot;</bucket>
+            <bucket>&quot;Tuesday  &quot;</bucket>
+            <bucket>&quot;Wednesday&quot;</bucket>
+            <bucket>&quot;Thursday &quot;</bucket>
+            <bucket>&quot;Friday   &quot;</bucket>
+            <bucket>&quot;Saturday &quot;</bucket>
+            <bucket>&quot;Sunday   &quot;</bucket>
+          </dictionary>
+        </sort>
+      </default-sorts>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='document_number' />
+        <field-sort-custom-order field='segmento' />
+        <field-sort-custom-order field='Calculation_263742078033911809' />
+        <field-sort-custom-order field='creation_date' />
+        <field-sort-custom-order field='duracion' />
+        <field-sort-custom-order field='dia_ida' />
+        <field-sort-custom-order field='dia_vuelta' />
+        <field-sort-custom-order field='dia_semana_compra' />
+        <field-sort-custom-order field='Calculation1' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='postgres.0upc5q61tad3nd1aadi900nwyiu5'>
+      <datasources>
+        <datasource caption='duracion_viaje (TFM)' name='postgres.0upc5q61tad3nd1aadi900nwyiu5' />
+      </datasources>
+      <datasource-dependencies datasource='postgres.0upc5q61tad3nd1aadi900nwyiu5'>
+        <column caption='Segmento nombre' datatype='string' name='[Calculation_263742078033911809]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='CASE [segmento] &#13;&#10;    WHEN &apos;0&apos; THEN &apos;Desvinculados&apos;&#13;&#10;    WHEN &apos;1&apos; THEN &apos;Nuevos&apos;&#13;&#10;    WHEN &apos;2&apos; THEN &apos;Turistas&apos;&#13;&#10;    WHEN &apos;3&apos; THEN &apos;Habituales&apos;&#13;&#10;END' />
+        </column>
+        <column caption='Duracion' datatype='integer' name='[duracion]' role='measure' type='quantitative' />
+        <column-instance column='[Calculation_263742078033911809]' derivation='None' name='[none:Calculation_263742078033911809:nk]' pivot='key' type='nominal' />
+        <column-instance column='[duracion]' derivation='None' name='[none:duracion:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk]'>
+        <groupfilter from='&quot;Desvinculados&quot;' function='range' level='[none:Calculation_263742078033911809:nk]' to='&quot;Turistas&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='quantitative' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]' included-values='in-range'>
+        <min>0</min>
+        <max>30</max>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Día vuelta' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Día ida' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Duración viajes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duracion_viaje (TFM)' name='postgres.0upc5q61tad3nd1aadi900nwyiu5' />
+          </datasources>
+          <datasource-dependencies datasource='postgres.0upc5q61tad3nd1aadi900nwyiu5'>
+            <column caption='Segmento nombre' datatype='string' name='[Calculation_263742078033911809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [segmento] &#13;&#10;    WHEN &apos;0&apos; THEN &apos;Desvinculados&apos;&#13;&#10;    WHEN &apos;1&apos; THEN &apos;Nuevos&apos;&#13;&#10;    WHEN &apos;2&apos; THEN &apos;Turistas&apos;&#13;&#10;    WHEN &apos;3&apos; THEN &apos;Habituales&apos;&#13;&#10;END' />
+            </column>
+            <column caption='Dia Ida' datatype='string' name='[dia_ida]' role='dimension' type='nominal' />
+            <column caption='Dia Vuelta' datatype='string' name='[dia_vuelta]' role='dimension' type='nominal' />
+            <column caption='Document Number' datatype='string' name='[document_number]' role='dimension' type='nominal' />
+            <column caption='Duracion' datatype='integer' name='[duracion]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_263742078033911809]' derivation='None' name='[none:Calculation_263742078033911809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dia_ida]' derivation='None' name='[none:dia_ida:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dia_vuelta]' derivation='None' name='[none:dia_vuelta:nk]' pivot='key' type='nominal' />
+            <column-instance column='[duracion]' derivation='None' name='[none:duracion:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[document_number]' derivation='Count' name='[pcto:cnt:document_number:qk:13]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Pane' type='PctTotal' />
+            </column-instance>
+            <column caption='Segmento' datatype='string' name='[segmento]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Action (Dia Vuelta,Segmento)]'>
+            <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[dia_vuelta]' />
+              <groupfilter function='level-members' level='[segmento]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:dia_ida:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:dia_vuelta:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Action (Dia Vuelta,Segmento)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]' value='Duración del viaje'>
+              <formatted-text>
+                <run>Duración del viaje</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:13]</rows>
+        <cols>([postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk] * [postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk])</cols>
+        <show-full-range>
+          <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Duracion (bin)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='Día ida'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duracion_viaje (TFM)' name='postgres.0upc5q61tad3nd1aadi900nwyiu5' />
+          </datasources>
+          <datasource-dependencies datasource='postgres.0upc5q61tad3nd1aadi900nwyiu5'>
+            <column caption='Segmento nombre' datatype='string' name='[Calculation_263742078033911809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [segmento] &#13;&#10;    WHEN &apos;0&apos; THEN &apos;Desvinculados&apos;&#13;&#10;    WHEN &apos;1&apos; THEN &apos;Nuevos&apos;&#13;&#10;    WHEN &apos;2&apos; THEN &apos;Turistas&apos;&#13;&#10;    WHEN &apos;3&apos; THEN &apos;Habituales&apos;&#13;&#10;END' />
+            </column>
+            <column caption='Dia Ida' datatype='string' name='[dia_ida]' role='dimension' type='nominal' />
+            <column caption='Dia Vuelta' datatype='string' name='[dia_vuelta]' role='dimension' type='nominal' />
+            <column caption='Document Number' datatype='string' name='[document_number]' role='dimension' type='nominal' />
+            <column caption='Duracion' datatype='integer' name='[duracion]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_263742078033911809]' derivation='None' name='[none:Calculation_263742078033911809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dia_ida]' derivation='None' name='[none:dia_ida:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dia_vuelta]' derivation='None' name='[none:dia_vuelta:nk]' pivot='key' type='nominal' />
+            <column-instance column='[duracion]' derivation='None' name='[none:duracion:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[duracion]' derivation='None' name='[none:duracion:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[document_number]' derivation='Count' name='[pcto:cnt:document_number:qk:6]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='RowInPane' type='PctTotal' />
+            </column-instance>
+            <column caption='Segmento' datatype='string' name='[segmento]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Action (Duracion,Segmento)]'>
+            <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:duracion:ok]' />
+              <groupfilter function='level-members' level='[segmento]' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Monday   &quot;</bucket>
+              <bucket>&quot;Tuesday  &quot;</bucket>
+              <bucket>&quot;Wednesday&quot;</bucket>
+              <bucket>&quot;Thursday &quot;</bucket>
+              <bucket>&quot;Friday   &quot;</bucket>
+              <bucket>&quot;Saturday &quot;</bucket>
+              <bucket>&quot;Sunday   &quot;</bucket>
+            </dictionary>
+          </sort>
+          <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:dia_vuelta:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Action (Duracion,Segmento)]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]' scope='rows' value='% de total de clientes' />
+            <format attr='subtitle' class='0' field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]</rows>
+        <cols>([postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk] / [postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Día vuelta'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duracion_viaje (TFM)' name='postgres.0upc5q61tad3nd1aadi900nwyiu5' />
+          </datasources>
+          <datasource-dependencies datasource='postgres.0upc5q61tad3nd1aadi900nwyiu5'>
+            <column caption='Segmento nombre' datatype='string' name='[Calculation_263742078033911809]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [segmento] &#13;&#10;    WHEN &apos;0&apos; THEN &apos;Desvinculados&apos;&#13;&#10;    WHEN &apos;1&apos; THEN &apos;Nuevos&apos;&#13;&#10;    WHEN &apos;2&apos; THEN &apos;Turistas&apos;&#13;&#10;    WHEN &apos;3&apos; THEN &apos;Habituales&apos;&#13;&#10;END' />
+            </column>
+            <column caption='Dia Ida' datatype='string' name='[dia_ida]' role='dimension' type='nominal' />
+            <column caption='Dia Vuelta' datatype='string' name='[dia_vuelta]' role='dimension' type='nominal' />
+            <column caption='Document Number' datatype='string' name='[document_number]' role='dimension' type='nominal' />
+            <column caption='Duracion' datatype='integer' name='[duracion]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_263742078033911809]' derivation='None' name='[none:Calculation_263742078033911809:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dia_ida]' derivation='None' name='[none:dia_ida:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dia_vuelta]' derivation='None' name='[none:dia_vuelta:nk]' pivot='key' type='nominal' />
+            <column-instance column='[duracion]' derivation='None' name='[none:duracion:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[duracion]' derivation='None' name='[none:duracion:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[document_number]' derivation='Count' name='[pcto:cnt:document_number:qk:6]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='RowInPane' type='PctTotal' />
+            </column-instance>
+            <column caption='Segmento' datatype='string' name='[segmento]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Action (Duracion,Segmento)]'>
+            <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:duracion:ok]' />
+              <groupfilter function='level-members' level='[segmento]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:dia_ida:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <sort class='manual' column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Monday   &quot;</bucket>
+              <bucket>&quot;Tuesday  &quot;</bucket>
+              <bucket>&quot;Wednesday&quot;</bucket>
+              <bucket>&quot;Thursday &quot;</bucket>
+              <bucket>&quot;Friday   &quot;</bucket>
+              <bucket>&quot;Saturday &quot;</bucket>
+              <bucket>&quot;Sunday   &quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Action (Duracion,Segmento)]</column>
+            <column>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]' scope='rows' value='% de total de clientes' />
+            <format attr='subtitle' class='0' field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='18' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[pcto:cnt:document_number:qk:6]</rows>
+        <cols>([postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk] / [postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk])</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='duracion_viaje (TFM)' name='postgres.0upc5q61tad3nd1aadi900nwyiu5' />
+      </datasources>
+      <datasource-dependencies datasource='postgres.0upc5q61tad3nd1aadi900nwyiu5'>
+        <column caption='Dia Ida' datatype='string' name='[dia_ida]' role='dimension' type='nominal' />
+        <column caption='Dia Vuelta' datatype='string' name='[dia_vuelta]' role='dimension' type='nominal' />
+        <column caption='Duracion' datatype='integer' name='[duracion]' role='measure' type='quantitative' />
+        <column-instance column='[dia_ida]' derivation='None' name='[none:dia_ida:nk]' pivot='key' type='nominal' />
+        <column-instance column='[dia_vuelta]' derivation='None' name='[none:dia_vuelta:nk]' pivot='key' type='nominal' />
+        <column-instance column='[duracion]' derivation='None' name='[none:duracion:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[segmento]' derivation='None' name='[none:segmento:nk]' pivot='key' type='nominal' />
+        <column caption='Segmento' datatype='string' name='[segmento]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='5' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='3' type='layout-basic' w='84000' x='0' y='0'>
+              <zone h='39625' id='1' name='Duración viajes' show-title='true' w='84000' x='0' y='60375' />
+              <zone h='27625' id='8' name='Día ida' show-title='true' w='84000' x='0' y='0' />
+              <zone h='32750' id='10' name='Día vuelta' show-title='true' w='84000' x='0' y='27625' />
+            </zone>
+            <zone fixed-size='160' h='100000' id='13' is-fixed='true' type='layout-basic' w='16000' x='84000' y='0'>
+              <zone h='27625' id='4' param='vert' type='layout-flow' w='16000' x='84000' y='0'>
+                <zone fixed-size='291' h='27625' id='7' is-fixed='true' name='Duración viajes' param='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]' type='filter' w='16000' x='84000' y='0' />
+              </zone>
+              <zone h='72375' id='15' type='layout-basic' w='16000' x='84000' y='27625'>
+                <zone h='39000' id='14' param='vert' type='layout-flow' w='16000' x='84000' y='27625'>
+                  <zone fixed-size='255' h='32875' id='12' is-fixed='true' name='Duración viajes' param='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]' type='filter' w='16000' x='84000' y='27625' />
+                </zone>
+                <zone h='33375' id='16' param='vert' type='layout-flow' w='16000' x='84000' y='66625'>
+                  <zone fixed-size='79' h='10875' id='11' is-fixed='true' name='Duración viajes' param='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]' type='filter' values='all' w='16000' x='84000' y='66625' />
+                  <zone h='14875' id='17' name='Día ida' param='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:segmento:nk]' type='filter' w='16000' x='84000' y='77500' />
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='28'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Duración viajes'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Día ida'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Día vuelta'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' name='Día ida'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:document_number:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:segmento:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Día vuelta'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_vuelta:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:document_number:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:segmento:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Duración viajes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[Duracion (bin)]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:Calculation_263742078033911809:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:dia_ida:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:document_number:nk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:duracion:qk]</field>
+            <field>[postgres.0upc5q61tad3nd1aadi900nwyiu5].[none:segmento:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Día ida' width='192'>
+      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
+      PGbBJx6z/wfT7qTVRVc1/gAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Día vuelta' width='192'>
+      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
+      TkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Duración viajes' width='192'>
+      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
+      RU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
